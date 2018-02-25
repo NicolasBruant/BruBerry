@@ -1,9 +1,17 @@
 import xml.etree.ElementTree as ET
+import sys
+import urllib
+
+# Retrieving data from WESV2
+urlDATA='http://admin:wes@wesv2/data.cgx'
+f = urllib.urlopen(urlDATA)
+data = f.read()
+root = ET.fromstring(data)
 
 # The data must be in the data.xml file
 # Request : wesv2/data.cgx -> data.xml
-tree = ET.parse('data.xml')
-root = tree.getroot()
+#tree = ET.parse('data.xml')
+#root = tree.getroot()
 
 SONDES=["SONDE1", "SONDE2", "SONDE3"]
 
