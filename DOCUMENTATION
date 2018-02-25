@@ -1,0 +1,6 @@
+This file is intended to documment the main aspects of Jeedom specifics and the integration with WES and other devices
+
+How to control the executrion of host level scripts from Jeedom
+You must place the script into the following directory :
+  /var/www/html/plugins/script/core/ressources/
+The script must be executable (chmod +x) by Jeedom user (depending on the installation)
