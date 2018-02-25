@@ -1,0 +1,13 @@
+import xml.etree.ElementTree as ET
+
+# The data must be in the data.xml file
+# Request : wesv2/data.cgx -> data.xml
+tree = ET.parse('data.xml')
+root = tree.getroot()
+
+SONDES=["SONDE1", "SONDE2", "SONDE3"]
+
+for child in root.findall('temp'):
+    for sonde in SONDES:
+        temp = child.find(sonde).text
+        print temp
