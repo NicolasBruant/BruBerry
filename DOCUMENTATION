@@ -4,3 +4,6 @@ How to control the executrion of host level scripts from Jeedom
 You must place the script into the following directory :
   /var/www/html/plugins/script/core/ressources/
 The script must be executable (chmod +x) by Jeedom user (depending on the installation)
+
+#!/bin/bash
+sudo python /var/www/html/core/php/../../plugins/script/core/ressources/relayON.py
